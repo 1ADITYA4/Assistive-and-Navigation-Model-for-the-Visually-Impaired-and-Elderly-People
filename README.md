@@ -1,32 +1,91 @@
-Assistive Object Detection and Navigation System for the Visually Impaired:
+# 🧭 Assistive Object Detection & Navigation System for the Visually Impaired
 
+An AI-powered, voice-interactive system built with computer vision and speech recognition to help visually impaired individuals navigate and identify everyday objects in real-time.
 
+![YOLO + Voice Interaction](https://img.shields.io/badge/Python-3.8%2B-blue)
+![YOLOv8](https://img.shields.io/badge/Object%20Detection-YOLOv8-green)
+![Voice](https://img.shields.io/badge/Voice%20Command-Enabled-orange)
+![Status](https://img.shields.io/badge/Project-Active-lightgreen)
 
-This project is an advanced computer vision-based assistive system designed to aid visually impaired individuals in identifying objects and navigating their surroundings. Leveraging YOLOv8 for object detection, the system provides real-time feedback on:
+---
 
-Distance Estimation: Measures the distance between the user and a selected target object, ensuring spatial awareness.
-Directional Guidance: Determines the direction the user should move to reach the target object and provides turn-by-turn navigation instructions.
-Voice Interaction: Uses speech recognition to allow users to select objects of interest and provides real-time voice feedback for distance and direction.
-----------------Key Features
-Object Selection via Voice Commands: Users can specify the object they wish to locate using natural speech.
-Real-Time Object Detection and Tracking: YOLOv8 is utilized for robust object detection and tracking across video frames.
-Distance and Direction Monitoring: Calculates the distance and direction (left, right, straight) between the user and the target object.
-Interactive Voice Feedback: Provides clear audio guidance on distance and direction, enabling intuitive navigation.
-Save Functionality: Allows saving specific video frames for review or debugging.
-Cross-Platform Compatibility: Built with Python, ensuring portability and ease of integration.
-----------------------How It Works
-Object Detection: Detects multiple objects in a video stream using YOLOv8.
-Distance Estimation: Calculates the real-world distance to the target object based on its size and the camera's focal length.
-Directional Guidance: Determines relative positioning and provides feedback on whether the user needs to turn left, right, or move straight to approach the target object.
-Voice Interaction: Guides the user in selecting objects and navigating efficiently using text-to-speech (TTS) and speech recognition.
------------------Use Case
-This system is specifically designed for assisting visually impaired individuals in real-world environments, such as identifying personal belongings (e.g., cell phone, laptop) or navigating towards furniture (e.g., chairs, bed).
+## 📌 Overview
 
------------Tech Stack
-Programming Language: Python
-Libraries:
-ultralytics (YOLOv8) for object detection
-cv2 (OpenCV) for image processing and tracking
-speech_recognition for speech-to-text
-pyttsx3 for text-to-speech
-threading for real-time, synchronized voice feedback
+This project leverages **YOLOv8**, **OpenCV**, and voice interaction to assist users in identifying objects and safely navigating their environment. It offers **real-time detection, distance estimation**, and **audio-based navigation**, making it especially helpful for **visually impaired or elderly users**.
+
+---
+
+## 🎯 Key Features
+
+✅ **🎙️ Object Selection via Voice**  
+Speak naturally to choose the object you want to locate (e.g., "laptop", "bottle").
+
+✅ **🔍 Real-Time Detection & Tracking**  
+Uses **YOLOv8** to detect and track objects across video frames.
+
+✅ **📏 Distance & Direction Awareness**  
+Calculates the distance and gives clear instructions like "Go straight", "Turn left", or "Object to your right".
+
+✅ **🗣️ Interactive Voice Feedback**  
+Provides spoken guidance using text-to-speech.
+
+✅ **🧠 Smart Multi-threading**  
+Speech and video detection run in sync without lag using Python’s threading module.
+
+✅ **💾 Save Video Frames**  
+Capture and store video frames for review/debugging.
+
+✅ **🌐 Cross-Platform Compatibility**  
+Runs on any OS supporting Python 3.8+, with no external hardware required.
+
+---
+
+## ⚙️ How It Works
+
+### 🔎 Object Detection
+YOLOv8 detects objects from the video stream using a pre-trained model.
+
+### 📐 Distance Estimation
+Calculates the distance of the selected object using its size in pixels and known camera focal length.
+
+### 🧭 Directional Navigation
+Determines the direction (left/right/straight) to guide the user toward the object.
+
+### 🧑‍💻 Voice Interaction
+- Accepts voice commands via microphone.
+- Speaks navigation instructions using text-to-speech.
+
+---
+
+## 🧪 Use Cases
+
+- **Identify personal belongings** like phones, wallets, or keys.  
+- **Navigate indoor spaces** safely—e.g., locating a chair or door.  
+- **Guide elderly users** around home environments.  
+- Ideal for **assistive robotics or wearables**.
+
+---
+
+## 🧰 Tech Stack
+
+| Component             | Technology                  |
+|----------------------|-----------------------------|
+| Language             | Python                      |
+| Object Detection     | YOLOv8 via Ultralytics      |
+| Image Processing     | OpenCV (`cv2`)              |
+| Speech Recognition   | `speech_recognition`        |
+| Text-to-Speech       | `pyttsx3`                   |
+| Multithreading       | Python `threading`          |
+
+---
+
+## 🚀 Getting Started
+
+### 🔧 Prerequisites
+
+Make sure you have Python 3.8+ installed.
+
+Install dependencies:
+```bash
+pip install ultralytics opencv-python speechrecognition pyttsx3
+
